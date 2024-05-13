@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 
 export const Display = () => {
-  const [count, setCount] = useState(0);
+  const { count } = useSelector((state) => state.counterState);
 
   return <div>{count}</div>;
 };
